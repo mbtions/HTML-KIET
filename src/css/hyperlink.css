@@ -14,7 +14,7 @@ a:hover {
     text-decoration:underline ;
 }
 a:active {
-    color: yellow;
-    background-color:#f44336 !important;
+    color: rgb(245, 221, 37);
+    background-color:transparent;
     text-decoration: underline #008CBA 1px solid;
 }
