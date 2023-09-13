@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json arrays</title>
+    <script>
+        var employeeData = [
+            {
+                "fname":"John",
+                "email":"john234@gmail.com",
+                "age":34
+            },
+            {
+                "fname":"Riya",
+                "email":"riya29hr@gmail.com",
+                "age":27
+            },
+            {
+                "fname":"Pranit",
+                "email":"pranitsr344@gmail.com",
+                "age":26
+            },
+            {
+                "fname":"Rajesh",
+                "email":"rajesh1978@gmail.com",
+                "age":45
+            }
+        ]
+
+        for (var i=0; i<employeeData.length; i++) {
+            document.write(employeeData[i].fname+" ");
+            document.write(employeeData[i].email+", ");
+            document.write(employeeData[i].age+"<br/>");
+        }   
+        
+        document.write("<h4>Most senior is "+employeeData[3].fname+" "+employeeData[3].age+"years old. </h4>");
+        document.write("<h4>Most junior is "+employeeData[2].fname+" "+employeeData[2].age+"years old. </h4>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
