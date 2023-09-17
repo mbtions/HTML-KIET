@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyramid Stars</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      .container {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: large;
+        margin: auto;
+        width: 60%;
+        background-color: rgba(255, 255, 225, 0.8);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 50px;
+      }
+      #height {
+        margin: 5px 0px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        width: 100%;
+      }
+      #generateButton {
+        padding: 10px;
+        border: none;
+        background-color: cadetblue;
+        color: white;
+        width: 100%;
+        margin: 10px 0px;
+        border-radius: 10px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: large;
+      }
+      #pyramid {
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        margin: 50px 0px;
+        background-color: whitesmoke;
+        color: cadetblue;
+      }
+    </style>
+
+    <script>
+        generatePyramid(4);
+        function generatePyramid(height) {
+            //document.getElementById("pyramid").toggleClass("open");
+            document.getElementById("pyramid").innerHTML += "<p";
+            for (var i = 1; i <= height; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.getElementById("pyramid").innerHTML += '*';
+                }
+                document.getElementById("pyramid").innerHTML += "<br/>";
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label for="height">Enter the height of the Pyramid: </label><br />
+        <input type="number" id="height" /><br />
+        <button id="generateButton" type="submit">Generate</button>
+        <div id="pyramid">
+            
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
